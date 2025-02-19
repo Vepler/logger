@@ -1,4 +1,5 @@
-import pino, { Logger, LoggerOptions, StreamEntry, Bindings, MultiStreamRes } from 'pino';
+import type { Logger, LoggerOptions, Bindings} from 'pino';
+import pino from 'pino';
 
 // Type for structured log context
 interface LogContext {
@@ -92,7 +93,7 @@ class PinoWrapper {
     // Extract all enumerable properties from the error
     const errorProperties = Object.getOwnPropertyNames(error).reduce((acc, key) => {
       if (key !== 'message' && key !== 'stack' && key !== 'name') {
-        acc[key] = (error as any)[key];
+        acc[key] = (error as never)[key];
       }
       return acc;
     }, {} as Record<string, unknown>);
