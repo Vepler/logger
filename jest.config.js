@@ -3,4 +3,7 @@ module.exports = {
   testEnvironment: 'node',
   testMatch: ['**/*.test.ts'],
   moduleFileExtensions: ['ts', 'js'],
+  "collectCoverage": true,
+  "coverageReporters": ["lcov", "text"],
+  "coverageDirectory": "coverage"
 };
