@@ -215,6 +215,15 @@ PinoWrapper.initialize({
 
 We welcome contributions! Please feel free to submit a Pull Request.
 
+# Releasing
+Releases are automated using GitHub Actions. To create a new release:
+
+1. Push your changes
+2. GitHub Action will automatically:
+    - Create a new version
+    - Create a GitHub Release
+    - Publish to npm
+
 ## License
 
 MIT © vepler
